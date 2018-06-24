@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <!--
+    This layout is a two-pane layout for the Items
+    master/detail flow.
+    -->
+    <!--suppress AndroidDomInspection -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_search_list"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        tools:listitem="@layout/search_list_item"/>
+
+    <TextView
+        android:id="@+id/item_search_no_results"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="@string/search_no_results"/>
+
+    <ScrollView
+        android:id="@+id/item_search_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/item_search_no_item_selected"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:padding="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/description_select_an_item"/>
+
+</LinearLayout>

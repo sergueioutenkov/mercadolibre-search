@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ML Búsqueda</string>
+
+    <string name="search_no_results">Sin resultados</string>
+    <string name="search_search_hint">Buscar</string>
+
+    <string name="description_select_an_item">Seleccione un item de la lista</string>
+</resources>

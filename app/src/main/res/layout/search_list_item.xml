@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@color/titleColor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/item_thumbnail"
+        tools:text="Chromecast TV HDMI titulo largo que puede ser de multiples lineas porque" />
+
+    <ImageView
+        android:id="@+id/item_thumbnail"
+        android:layout_width="93dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_free_shipping_icon"
+        app:layout_constraintEnd_toStartOf="@+id/item_free_shipping_icon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/item_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/item_free_shipping_icon"
+        tools:text="$ 1500" />
+
+    <ImageView
+        android:id="@+id/item_free_shipping_icon"
+        android:layout_width="33dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_rating"
+        app:layout_constraintEnd_toStartOf="@+id/item_rating"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_price"
+        app:layout_constraintTop_toTopOf="@+id/item_rating"
+        app:srcCompat="@drawable/ic_local_shipping" />
+
+    <RatingBar
+        android:id="@+id/item_rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:numStars="5"
+        android:rating="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_free_shipping_icon"
+        app:layout_constraintTop_toBottomOf="@+id/item_title" />
+
+</android.support.constraint.ConstraintLayout>
